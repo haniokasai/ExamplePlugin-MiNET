@@ -1,0 +1,17 @@
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\ExamplePlugin.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\ExamplePlugin.pdb
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\fNbt.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\jose-jwt.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\LibNoise.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\log4net.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\Microsoft.AspNet.Identity.Core.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\MiNET.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\Newtonsoft.Json.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\fNbt.xml
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\LibNoise.xml
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\log4net.xml
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\Microsoft.AspNet.Identity.Core.xml
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\bin\Release\Newtonsoft.Json.xml
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\obj\Release\ExamplePlugin.dll
+Z:\users\doc\GitHub\ExamplePlugin\ExamplePlugin\ExamplePlugin\obj\Release\ExamplePlugin.pdb
