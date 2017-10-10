@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+## ExamplePlugin-MiNET
 
-You can use the [editor on GitHub](https://github.com/haniokasai/ExamplePlugin-MiNET/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+付録
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+0 MINETについて
 
-### Markdown
+https://haniokasai.github.io/ExamplePlugin-MiNET/minet/0%20MiNET%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20_%20MiNET%E5%85%A5%E9%96%80.html
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1 MINETのインストール方法
 
-```markdown
-Syntax highlighted code block
+https://haniokasai.github.io/ExamplePlugin-MiNET/minet/1%20MiNET%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95%20_%20MiNET%E5%85%A5%E9%96%80.html
 
-# Header 1
-## Header 2
-### Header 3
+minet/2 プラグインの導入 _ MiNET入門.html
 
-- Bulleted
-- List
+https://haniokasai.github.io/ExamplePlugin-MiNET/minet/2%20%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AE%E5%B0%8E%E5%85%A5%20_%20MiNET%E5%85%A5%E9%96%80.html
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+3 プラグイン開発
 
-[Link](url) and ![Image](src)
-```
+https://haniokasai.github.io/ExamplePlugin-MiNET/minet/3%20%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E9%96%8B%E7%99%BA%20_%20MiNET%E5%85%A5%E9%96%80.html
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/haniokasai/ExamplePlugin-MiNET/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Joinmessage.dll
+https://github.com/haniokasai/ExamplePlugin-MiNET/blob/master/minet/JoinMessage.dll?raw=true
