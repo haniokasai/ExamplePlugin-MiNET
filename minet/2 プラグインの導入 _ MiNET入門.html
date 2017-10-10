@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/ -->
+<html lang="ja"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width">
+	<title>2 プラグインの導入 | MiNET入門</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://ogiwara.wpblog.jp/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://ogiwara.wpblog.jp/wp-content/themes/twentyfourteen/js/html5.js"></script>
+	<![endif]-->
+	<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="MiNET入門 » フィード" href="http://ogiwara.wpblog.jp/feed/">
+<link rel="alternate" type="application/rss+xml" title="MiNET入門 » コメントフィード" href="http://ogiwara.wpblog.jp/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="MiNET入門 » 2 プラグインの導入 のコメントのフィード" href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/ogiwara.wpblog.jp\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.7"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./2 プラグインの導入 _ MiNET入門_files/wp-emoji-release.min.js.ダウンロード" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="font-awesome-css" href="./2 プラグインの導入 _ MiNET入門_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpdm-bootstrap-css" href="./2 プラグインの導入 _ MiNET入門_files/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpdm-front-css" href="./2 プラグインの導入 _ MiNET入門_files/front.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfourteen-lato-css" href="./2 プラグインの導入 _ MiNET入門_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./2 プラグインの導入 _ MiNET入門_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfourteen-style-css" href="./2 プラグインの導入 _ MiNET入門_files/style.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='http://ogiwara.wpblog.jp/wp-content/themes/twentyfourteen/css/ie.css?ver=20131205' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/jquery.js.ダウンロード"></script>
+<script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/jquery-migrate.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/bootstrap.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/front.js.ダウンロード"></script>
+<script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/chosen.jquery.min.js.ダウンロード"></script>
+<meta name="generator" content="WordPress Download Manager 2.9.2">
+<link rel="https://api.w.org/" href="http://ogiwara.wpblog.jp/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ogiwara.wpblog.jp/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ogiwara.wpblog.jp/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="1 MiNETのインストール方法" href="http://ogiwara.wpblog.jp/2016/11/24/howtoinstall/">
+<link rel="next" title="3 プラグイン開発" href="http://ogiwara.wpblog.jp/2016/11/24/developingplugin/">
+<link rel="canonical" href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/">
+<link rel="shortlink" href="http://ogiwara.wpblog.jp/?p=117">
+<link rel="alternate" type="application/json+oembed" href="http://ogiwara.wpblog.jp/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fogiwara.wpblog.jp%2F2016%2F11%2F24%2Fhowtoimportplugins%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://ogiwara.wpblog.jp/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fogiwara.wpblog.jp%2F2016%2F11%2F24%2Fhowtoimportplugins%2F&amp;format=xml">
+
+        <script>
+            var wpdm_site_url = 'http://ogiwara.wpblog.jp/';
+            var wpdm_home_url = 'http://ogiwara.wpblog.jp/';
+            var ajax_url = 'http://ogiwara.wpblog.jp/wp-admin/admin-ajax.php';
+        </script>
+
+
+        </head>
+
+<body class="single single-post postid-117 single-format-standard masthead-fixed full-width singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="http://ogiwara.wpblog.jp/" rel="home">MiNET入門</a></h1>
+
+			<div class="search-toggle">
+				<a href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container">検索</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle">メインメニュー</button>
+				<a class="screen-reader-text skip-link" href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/#content">コンテンツへ移動</a>
+				<div class="menu-menu-1-container"><ul id="primary-menu" class="nav-menu"><li id="menu-item-58" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-58"><a href="http://ogiwara.wpblog.jp/">ホーム</a></li>
+</ul></div>			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="http://ogiwara.wpblog.jp/">
+				<label>
+					<span class="screen-reader-text">検索:</span>
+					<input type="search" class="search-field" placeholder="検索 …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="検索">
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-117" class="post-117 post type-post status-publish format-standard hentry category-1">
+	
+	<header class="entry-header">
+		<h1 class="entry-title">2 プラグインの導入</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/" rel="bookmark"><time class="entry-date" datetime="2016-11-24T14:57:25+00:00">2016年11月24日</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="http://ogiwara.wpblog.jp/author/ogiwara/" rel="author">ogiwara</a></span></span>			<span class="comments-link"><a href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/#respond">コメントをどうぞ</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>MiNETでプラグインを使用する方法を説明します</p>
+<p>server.confをテキストエディタで開き、PluginDirectoryの部分を以下のように変更します</p>
+<p><img class="alignnone wp-image-123 size-full" src="./2 プラグインの導入 _ MiNET入門_files/116f64d45b944cf95652efbbbed6ae44.png" alt="PluginDirectory" width="1295" height="786" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/116f64d45b944cf95652efbbbed6ae44.png 1295w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/116f64d45b944cf95652efbbbed6ae44-300x182.png 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/116f64d45b944cf95652efbbbed6ae44-768x466.png 768w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/116f64d45b944cf95652efbbbed6ae44-1024x622.png 1024w" sizes="(max-width: 1295px) 100vw, 1295px"></p>
+<p>次に、server.confと同じディレクトリにpluginsフォルダーを作成します</p>
+<p>あとはこのフォルダにプラグインを入れればいいだけです</p>
+<p>試しに、以下のファイルをダウンロードし、pluginsフォルダの中に入れてMiNETを起動して下さい</p>
+<div class="w3eden"><!-- WPDM Link Template: Default Template -->
+
+
+<div class="wpdm-link-tpl link-btn [color]" data-durl="http://ogiwara.wpblog.jp/download/joinmessage/?wpdmdl=119">
+    <div class="media">
+        <div class="pull-left"><img class="wpdm_icon" alt="Icon" src="./2 プラグインの導入 _ MiNET入門_files/_blank.png" onerror="this.src=&quot;http://ogiwara.wpblog.jp/wp-content/plugins/download-manager/assets/file-type-icons/_blank.png&quot;;"></div>
+        <div class="media-body"><strong class="ptitle">JoinMessage <span class="label label-default" style="font-weight: 400;">5.50 KB</span></strong>
+            <div><strong><a class="wpdm-download-link wpdm-download-locked [btnclass]" rel="nofollow" href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/#" onclick="location.href=&#39;http://ogiwara.wpblog.jp/download/joinmessage/?wpdmdl=119&#39;;return false;">Download</a></strong></div>
+        </div>
+    </div>
+</div>
+<div style="clear: both"></div>
+</div>
+<p>すると、このようにサーバー起動時と、プレイヤー入退出時にメッセージが表示されるようになります</p>
+<p><img class="alignnone wp-image-126 size-full" src="./2 プラグインの導入 _ MiNET入門_files/5773ff3e4394565584224a89e79dbe0a.png" alt="JoinMessageTry" width="1489" height="857" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/5773ff3e4394565584224a89e79dbe0a.png 1489w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/5773ff3e4394565584224a89e79dbe0a-300x173.png 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/5773ff3e4394565584224a89e79dbe0a-768x442.png 768w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/5773ff3e4394565584224a89e79dbe0a-1024x589.png 1024w" sizes="(max-width: 1489px) 100vw, 1489px"></p>
+<p>また、MCPE側ではこうなります</p>
+<p><img class="alignnone size-full wp-image-127" src="./2 プラグインの導入 _ MiNET入門_files/image.jpg" alt="JoinMessageClient" width="1136" height="640" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/image.jpg 1136w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/image-300x169.jpg 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/image-768x433.jpg 768w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/image-1024x577.jpg 1024w" sizes="(max-width: 1136px) 100vw, 1136px"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+	</div><!-- .entry-content -->
+	
+	</article><!-- #post-## -->
+	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">投稿ナビゲーション</h1>
+		<div class="nav-links">
+			<a href="http://ogiwara.wpblog.jp/2016/11/24/howtoinstall/" rel="prev"><span class="meta-nav">前の投稿</span>1 MiNETのインストール方法</a><a href="http://ogiwara.wpblog.jp/2016/11/24/developingplugin/" rel="next"><span class="meta-nav">次の投稿</span>3 プラグイン開発</a>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+<div id="comments" class="comments-area">
+
+	
+					<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">コメントを残す <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/#respond" style="display:none;">コメントをキャンセル</a></small></h3>				<form action="http://ogiwara.wpblog.jp/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+					<p class="comment-notes"><span id="email-notes">メールアドレスが公開されることはありません。</span> <span class="required">*</span> が付いている欄は必須項目です</p><p class="comment-form-comment"><label for="comment">コメント</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">名前 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required="true" required="required"></p>
+<p class="comment-form-email"><label for="email">メールアドレス <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required"></p>
+<p class="comment-form-url"><label for="url">ウェブサイト</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="コメントを送信"> <input type="hidden" name="comment_post_ID" value="117" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="d024c05f9e"></p><p style="display: none;"></p>				<input type="hidden" id="ak_js" name="ak_js" value="1507645372748"></form>
+					</div><!-- #respond -->
+		
+</div><!-- #comments -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">MiNETプラグイン開発支援</h2>
+	
+	
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+			<div class="site-info">
+								<a href="https://ja.wordpress.org/">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	<script src="./2 プラグインの導入 _ MiNET入門_files/wpblog.js.ダウンロード"></script><script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/form.js.ダウンロード"></script>
+<script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/jquery.form.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/comment-reply.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/functions.js.ダウンロード"></script>
+<script type="text/javascript" src="./2 プラグインの導入 _ MiNET入門_files/wp-embed.min.js.ダウンロード"></script>
+
+<span id="sbmarwusasv5"></span></body></html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://ogiwara.wpblog.jp/2016/11/24/developingplugin/ -->
+<html lang="ja"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width">
+	<title>3 プラグイン開発 | MiNET入門</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://ogiwara.wpblog.jp/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://ogiwara.wpblog.jp/wp-content/themes/twentyfourteen/js/html5.js"></script>
+	<![endif]-->
+	<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="MiNET入門 » フィード" href="http://ogiwara.wpblog.jp/feed/">
+<link rel="alternate" type="application/rss+xml" title="MiNET入門 » コメントフィード" href="http://ogiwara.wpblog.jp/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="MiNET入門 » 3 プラグイン開発 のコメントのフィード" href="http://ogiwara.wpblog.jp/2016/11/24/developingplugin/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/ogiwara.wpblog.jp\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.7"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./3 プラグイン開発 _ MiNET入門_files/wp-emoji-release.min.js.ダウンロード" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="font-awesome-css" href="./3 プラグイン開発 _ MiNET入門_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpdm-bootstrap-css" href="./3 プラグイン開発 _ MiNET入門_files/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpdm-front-css" href="./3 プラグイン開発 _ MiNET入門_files/front.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfourteen-lato-css" href="./3 プラグイン開発 _ MiNET入門_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./3 プラグイン開発 _ MiNET入門_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfourteen-style-css" href="./3 プラグイン開発 _ MiNET入門_files/style.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='http://ogiwara.wpblog.jp/wp-content/themes/twentyfourteen/css/ie.css?ver=20131205' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/jquery.js.ダウンロード"></script>
+<script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/jquery-migrate.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/bootstrap.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/front.js.ダウンロード"></script>
+<script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/chosen.jquery.min.js.ダウンロード"></script>
+<meta name="generator" content="WordPress Download Manager 2.9.2">
+<link rel="https://api.w.org/" href="http://ogiwara.wpblog.jp/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ogiwara.wpblog.jp/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ogiwara.wpblog.jp/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="2 プラグインの導入" href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/">
+<link rel="canonical" href="http://ogiwara.wpblog.jp/2016/11/24/developingplugin/">
+<link rel="shortlink" href="http://ogiwara.wpblog.jp/?p=131">
+<link rel="alternate" type="application/json+oembed" href="http://ogiwara.wpblog.jp/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fogiwara.wpblog.jp%2F2016%2F11%2F24%2Fdevelopingplugin%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://ogiwara.wpblog.jp/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fogiwara.wpblog.jp%2F2016%2F11%2F24%2Fdevelopingplugin%2F&amp;format=xml">
+
+        <script>
+            var wpdm_site_url = 'http://ogiwara.wpblog.jp/';
+            var wpdm_home_url = 'http://ogiwara.wpblog.jp/';
+            var ajax_url = 'http://ogiwara.wpblog.jp/wp-admin/admin-ajax.php';
+        </script>
+
+
+        </head>
+
+<body class="single single-post postid-131 single-format-standard masthead-fixed full-width singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="http://ogiwara.wpblog.jp/" rel="home">MiNET入門</a></h1>
+
+			<div class="search-toggle">
+				<a href="http://ogiwara.wpblog.jp/2016/11/24/developingplugin/#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container">検索</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle">メインメニュー</button>
+				<a class="screen-reader-text skip-link" href="http://ogiwara.wpblog.jp/2016/11/24/developingplugin/#content">コンテンツへ移動</a>
+				<div class="menu-menu-1-container"><ul id="primary-menu" class="nav-menu"><li id="menu-item-58" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-58"><a href="http://ogiwara.wpblog.jp/">ホーム</a></li>
+</ul></div>			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="http://ogiwara.wpblog.jp/">
+				<label>
+					<span class="screen-reader-text">検索:</span>
+					<input type="search" class="search-field" placeholder="検索 …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="検索">
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-131" class="post-131 post type-post status-publish format-standard hentry category-1">
+	
+	<header class="entry-header">
+		<h1 class="entry-title">3 プラグイン開発</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="http://ogiwara.wpblog.jp/2016/11/24/developingplugin/" rel="bookmark"><time class="entry-date" datetime="2016-11-24T21:29:16+00:00">2016年11月24日</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="http://ogiwara.wpblog.jp/author/ogiwara/" rel="author">ogiwara</a></span></span>			<span class="comments-link"><a href="http://ogiwara.wpblog.jp/2016/11/24/developingplugin/#respond">コメントをどうぞ</a></span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>ここからは、私がまだプラグイン開発を始めたばかり、という事もあってかなりあやふやな説明です。ご了承ください</p>
+<p>(pocketmineプラグインのみ開発したことがある方向けのページです。IDEの機能などについてはツッコミ所があるかもしれませんがご了承ください)</p>
+<p>MiNETでプラグインを開発するには、C#の最低限の知識(オブジェクト指向など)と、pocketmineプラグイン開発の経験が必要です</p>
+<p>What is good for Developers?</p>
+<p>pocketmineでMiNETでプラグイン開発をすることのメリットは、</p>
+<ul>
+<li>先進的なプログラミング言語であるC#について学べる</li>
+<li>パケットのやり取りがログに保存され、MCPEのパケットについて詳しくなれる</li>
+<li>C# + Visual Studioの組み合わせにより、非常に生産性の高いコーディングが行える</li>
+</ul>
+<p>などであると私は思います</p>
+<p>構文エラーチェック</p>
+<p><img class="alignnone wp-image-132 size-full" src="./3 プラグイン開発 _ MiNET入門_files/9aa239c1ad7d84696453f08a9a3d41d3.png" alt="checkerror" width="992" height="585" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/9aa239c1ad7d84696453f08a9a3d41d3.png 992w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/9aa239c1ad7d84696453f08a9a3d41d3-300x177.png 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/9aa239c1ad7d84696453f08a9a3d41d3-768x453.png 768w" sizes="(max-width: 992px) 100vw, 992px"></p>
+<p>メソッド、フィールド一覧表示</p>
+<p><img class="alignnone size-full wp-image-133" src="./3 プラグイン開発 _ MiNET入門_files/ccfa974f449aa9dae9b828a6b3b02ae2.png" alt="methods" width="723" height="571" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/ccfa974f449aa9dae9b828a6b3b02ae2.png 723w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/ccfa974f449aa9dae9b828a6b3b02ae2-300x237.png 300w" sizes="(max-width: 723px) 100vw, 723px"></p>
+<p>使用するクラスの情報表示</p>
+<p><img class="alignnone wp-image-134 size-full" src="./3 プラグイン開発 _ MiNET入門_files/da838c0594e3fd83a42cf9ae7d69ab65.png" alt="define1" width="1302" height="964" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/da838c0594e3fd83a42cf9ae7d69ab65.png 1302w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/da838c0594e3fd83a42cf9ae7d69ab65-300x222.png 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/da838c0594e3fd83a42cf9ae7d69ab65-768x569.png 768w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/da838c0594e3fd83a42cf9ae7d69ab65-1024x758.png 1024w" sizes="(max-width: 1302px) 100vw, 1302px"></p>
+<p><img class="alignnone wp-image-135 size-full" src="./3 プラグイン開発 _ MiNET入門_files/76122324b4aa0db63041d9fbcb18ccae-e1479993501562.png" alt="define2" width="1890" height="1225" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/76122324b4aa0db63041d9fbcb18ccae-e1479993501562.png 1890w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/76122324b4aa0db63041d9fbcb18ccae-e1479993501562-300x194.png 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/76122324b4aa0db63041d9fbcb18ccae-e1479993501562-768x498.png 768w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/76122324b4aa0db63041d9fbcb18ccae-e1479993501562-1024x664.png 1024w" sizes="(max-width: 1890px) 100vw, 1890px"></p>
+<p>では、実際にプラグインをつくってみましょう</p>
+<p>Visual Studioを開き、メニューのファイル-&gt;新規作成-&gt;プロジェクトを選択してください</p>
+<p>その後、Visual C# -&gt; クラスライブラリを選択して、プラグイン名とプラグインを置くディレクトリを決め、OKボタンを押して下さい</p>
+<p><img class="alignnone size-full wp-image-136" src="./3 プラグイン開発 _ MiNET入門_files/c11562d00153126862ee20492fa90b32.png" alt="ClassLibrary" width="1630" height="1113" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/c11562d00153126862ee20492fa90b32.png 1630w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/c11562d00153126862ee20492fa90b32-300x205.png 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/c11562d00153126862ee20492fa90b32-768x524.png 768w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/c11562d00153126862ee20492fa90b32-1024x699.png 1024w" sizes="(max-width: 1630px) 100vw, 1630px"></p>
+<p>プロジェクトの生成が終了したら、ソリューションエクスプローラー -&gt; Propertiesをダブルクリックして下さい</p>
+<p><img class="alignnone wp-image-137 size-full" src="./3 プラグイン開発 _ MiNET入門_files/5f9dd220aeb9e812da2ae3083bef3511-e1479993522839.png" alt="properties" width="644" height="1177" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/5f9dd220aeb9e812da2ae3083bef3511-e1479993522839.png 644w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/5f9dd220aeb9e812da2ae3083bef3511-e1479993522839-164x300.png 164w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/5f9dd220aeb9e812da2ae3083bef3511-e1479993522839-560x1024.png 560w" sizes="(max-width: 644px) 100vw, 644px"></p>
+<p>その後、「対象のフレームワーク」から、.NET framework 4.6.1を選択してください</p>
+<p><img class="alignnone size-full wp-image-138" src="./3 プラグイン開発 _ MiNET入門_files/4c7c2b16526c0fe3f29a79904f85b838.png" alt="selectframework" width="1336" height="1106" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/4c7c2b16526c0fe3f29a79904f85b838.png 1336w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/4c7c2b16526c0fe3f29a79904f85b838-300x248.png 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/4c7c2b16526c0fe3f29a79904f85b838-768x636.png 768w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/4c7c2b16526c0fe3f29a79904f85b838-1024x848.png 1024w" sizes="(max-width: 1336px) 100vw, 1336px"></p>
+<p>そしたら、メニューのツール-&gt; nugetパッケージマネージャー -&gt; ソリューションのNuGetパッケージの管理を選択し、検索ボックスにMiNETと入力し、それをインストールしてください</p>
+<p><img class="alignnone size-full wp-image-139" src="./3 プラグイン開発 _ MiNET入門_files/fe1a49894b7662595a9605ad72514dc3.png" alt="nuget" width="2107" height="1246" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/fe1a49894b7662595a9605ad72514dc3.png 2107w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/fe1a49894b7662595a9605ad72514dc3-300x177.png 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/fe1a49894b7662595a9605ad72514dc3-768x454.png 768w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/fe1a49894b7662595a9605ad72514dc3-1024x606.png 1024w" sizes="(max-width: 2107px) 100vw, 2107px"></p>
+<p>幾つか出てくるウインドウの内容をよく読み、インストールを完了させてください</p>
+<p>これで、プラグインの開発の準備は整いました。では、試しに次のコードを入力してみましょう。</p>
+<p><img class="alignnone size-full wp-image-142" src="./3 プラグイン開発 _ MiNET入門_files/6c3476d08b0687be1d74b4ddd5b0df5f.png" alt="first" width="1092" height="968" srcset="http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/6c3476d08b0687be1d74b4ddd5b0df5f.png 1092w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/6c3476d08b0687be1d74b4ddd5b0df5f-300x266.png 300w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/6c3476d08b0687be1d74b4ddd5b0df5f-768x681.png 768w, http://ogiwara.wpblog.jp/wp-content/uploads/2016/11/6c3476d08b0687be1d74b4ddd5b0df5f-1024x908.png 1024w" sizes="(max-width: 1092px) 100vw, 1092px"></p>
+<p>コードの編集が終わったら、Ctrl + S で保存し、上の開始ボタンを押してください。その後、無事にコンパイルが完了したら、bin/Debug内にプラグインが生成されているはずです。</p>
+	</div><!-- .entry-content -->
+	
+	</article><!-- #post-## -->
+	<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">投稿ナビゲーション</h1>
+		<div class="nav-links">
+			<a href="http://ogiwara.wpblog.jp/2016/11/24/howtoimportplugins/" rel="prev"><span class="meta-nav">前の投稿</span>2 プラグインの導入</a>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+<div id="comments" class="comments-area">
+
+	
+					<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">コメントを残す <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://ogiwara.wpblog.jp/2016/11/24/developingplugin/#respond" style="display:none;">コメントをキャンセル</a></small></h3>				<form action="http://ogiwara.wpblog.jp/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+					<p class="comment-notes"><span id="email-notes">メールアドレスが公開されることはありません。</span> <span class="required">*</span> が付いている欄は必須項目です</p><p class="comment-form-comment"><label for="comment">コメント</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">名前 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required="true" required="required"></p>
+<p class="comment-form-email"><label for="email">メールアドレス <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required"></p>
+<p class="comment-form-url"><label for="url">ウェブサイト</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="コメントを送信"> <input type="hidden" name="comment_post_ID" value="131" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="f551d2b5c6"></p><p style="display: none;"></p>				<input type="hidden" id="ak_js" name="ak_js" value="1507645377722"></form>
+					</div><!-- #respond -->
+		
+</div><!-- #comments -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">MiNETプラグイン開発支援</h2>
+	
+	
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+			<div class="site-info">
+								<a href="https://ja.wordpress.org/">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	<script src="./3 プラグイン開発 _ MiNET入門_files/wpblog.js.ダウンロード"></script><script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/form.js.ダウンロード"></script>
+<script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/jquery.form.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/comment-reply.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/functions.js.ダウンロード"></script>
+<script type="text/javascript" src="./3 プラグイン開発 _ MiNET入門_files/wp-embed.min.js.ダウンロード"></script>
+
+<span id="sbmarwusasv5"></span></body></html>
